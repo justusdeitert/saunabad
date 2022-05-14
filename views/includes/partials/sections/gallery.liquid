@@ -7,16 +7,18 @@
                         <h3 class="absolute top-0 left-0 w-full text-3xl italic font-bold text-center uppercase -translate-y-2/4">
                             {{ slide.title }}
                         </h3>
-                        {% image slide.image, slide.title, "(min-width: 30em) 50vw, 100vw" "aspect-square object-cover w-full mt-4" %}
+                        <div class="relative mt-4 image-wrapper">
+                            {% image slide.image, slide.title, "(min-width: 30em) 50vw, 100vw" "object-cover w-full h-full absolute" %}
+                        </div>
+   
                         <p class="text-center pt-8 my-auto mx-auto xl:max-w-[70%]">{{ slide.description }}</p>
                     </div>
                 {%- endfor %}
             </div>
         </div>
         <div class="flex">
-            {% include 'icons/icon-arrow-left' classnames: 'w-[5vw] stroke-yellow cursor-pointer' %}
-            {% include 'icons/icon-arrow-right' classnames: 'w-[5vw] stroke-yellow cursor-pointer' %}
+            {% include 'icons/icon-arrow-left' classnames: 'w-[5vw] stroke-yellow cursor-pointer prev-arrow swiper-button-prev' %}
+            {% include 'icons/icon-arrow-right' classnames: 'w-[5vw] stroke-yellow cursor-pointer next-arrow swiper-button-next' %}
         </div>
-    
     </div>
 </section>
