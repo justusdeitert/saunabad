@@ -21,6 +21,6 @@ module.exports = [
 	},
 	{
 		title: 'Sind Mobiltelefone erlaubt?',
-		body: 'Um die Privatsphäre unsere Gäste zu respektieren, ist das Mitführen von Mobiltelefonen in unserer Anlage verboten. Bitte lassen Sie deshalb Ihre Mobiltelefone in unserem Saunaschrank. Dies gilt auch für andere technische Geräte, die eine Video-oder Fotofunktion integriert haben. Das Mitführen dieser Geräte ist in unserer Anlage verboten.',
+		body: 'Um die Privatsphäre unsere Gäste zu respektieren, ist das Mitführen von Mobiltelefonen in unserer Anlage verboten. Bitte lassen Sie deshalb Ihre Mobiltelefone in Ihren Saunaschrank. Dies gilt auch für andere technische Geräte, die eine Video-oder Fotofunktion integriert haben. Das Mitführen dieser Geräte ist in unserer Anlage verboten.',
 	},
 ];
