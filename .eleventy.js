@@ -62,6 +62,8 @@ module.exports = function (eleventyConfig) {
 
 	// https://www.11ty.dev/docs/copy/
 	eleventyConfig.addPassthroughCopy({
+		// htaccess
+		'./src/.htaccess': '.htaccess',
 		// object as (src glob): (dest)
 		'./src/images/favicon.svg': './favicon.svg',
 		'./src/images/bar.jpg': './images/bar.jpg',
