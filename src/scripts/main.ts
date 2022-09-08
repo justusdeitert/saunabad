@@ -78,6 +78,14 @@ function initSwiper() {
 			},
 		},
 	});
+
+	document.querySelector('.swiper-button-prev')?.addEventListener('click', () => {
+		swiper.slidePrev();
+	});
+
+	document.querySelector('.swiper-button-next')?.addEventListener('click', () => {
+		swiper.slideNext();
+	});
 }
 
 initSwiper();

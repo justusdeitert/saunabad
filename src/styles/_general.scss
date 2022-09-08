@@ -1,5 +1,5 @@
 html {
-	color: theme("colors.dark.500");
+	color: theme('colors.dark.500');
 }
 
 table {
@@ -16,8 +16,8 @@ table {
 	}
 }
 
-ul, ol {
-
+ul,
+ol {
 	list-style: disc;
 	@apply pl-6 my-[1vw] text-base;
 }
@@ -70,4 +70,10 @@ html {
 
 .wrapper {
 	@apply px-6 md:px-[4vw] py-20 md:py-[8vw];
+}
+
+.image-wrapper {
+	display: block;
+	content: '';
+	padding-bottom: 100%;
 }
