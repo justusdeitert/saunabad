@@ -68,6 +68,7 @@ module.exports = function (eleventyConfig) {
 		'./src/images/favicon.svg': './favicon.svg',
 		'./src/images/bar.jpg': './images/bar.jpg',
 		'./src/images/saunagarten.jpg': './images/saunagarten.jpg',
+		'./src/images/saunagarten_02.jpg': './images/saunagarten_02.jpg',
 	});
 
 	return {

@@ -15,7 +15,7 @@ module.exports = [
 		title: 'Lesesaal',
 		description:
 			'Unsere kleine Bibliothek steht mit Bildbänden, Ausstellungskatalogen, Zeitschriften und Romanen zur Verfügung.',
-		image: './src/images/test.jpg',
+		image: './src/images/lesesaal.jpg',
 	},
 	{
 		title: "Bar",
@@ -26,12 +26,12 @@ module.exports = [
 		title: 'Privatsphäre',
 		description:
 			'In unserer Anlage sind Mobiltelefone oder andere technische Geräte mit einer Video- bzw. Fotofunktion verboten. ',
-		image: './src/images/test.jpg',
+		image: './src/images/eingang.jpg',
 	},
 	{
 		title: 'Aufguss-Öle',
 		description:
 			'Für unsere Aufgüsse verwenden wir ausschließlich naturreine ätherische Öle. Wie zum Beispiel Thuja, Wacholderholz oder Petitgrain.',
-		image: './src/images/test.jpg',
+		image: './src/images/im_garten.jpg',
 	},
 ];
