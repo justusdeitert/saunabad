@@ -1,4 +1,4 @@
-module.exports = [
+export default [
 	{
 		title: 'Wie viele Saunen gibt es?',
 		body: 'Eine 100 Grad-Blockbohlen-Sauna in unserem Saunagarten und eine großzügige 80 Grad Innensauna.',

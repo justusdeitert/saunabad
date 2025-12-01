@@ -1,9 +1,10 @@
-const htmlmin = require('./utils/htmlmin');
-const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
-const Image = require('@11ty/eleventy-img');
-const fs = require('fs');
+import htmlmin from './utils/htmlmin.js';
+import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
+import Image from '@11ty/eleventy-img';
+import fs from 'fs';
+import path from 'path';
+
 const isProd = process.env.NODE_ENV === 'production';
-const path = require('path');
 
 // https://www.11ty.dev/docs/plugins/image/
 async function imageShortcode(src, alt, sizes, classes) {
@@ -42,7 +43,7 @@ async function imageShortcode(src, alt, sizes, classes) {
 	return Image.generateHTML(metadata, imageAttributes);
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
 	// https://www.11ty.dev/docs/shortcodes/#universal-shortcodes
 	eleventyConfig.addShortcode('hash', () => Date.now());
 
@@ -80,4 +81,4 @@ module.exports = function (eleventyConfig) {
 			data: 'data',
 		},
 	};
-};
+}

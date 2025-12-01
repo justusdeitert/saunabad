@@ -1,8 +1,8 @@
 // tailwind.config.js
-const colors = require('tailwindcss/colors');
-const customColors = require('./colors.json');
+import colors from 'tailwindcss/colors.js';
+import customColors from './colors.json' with { type: 'json' };
 
-module.exports = {
+export default {
 	content: ['./src/**/*.{js, scss}', './views/**/*.liquid'],
 	theme: {
 		screens: {

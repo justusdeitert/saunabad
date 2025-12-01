@@ -62,6 +62,7 @@ const H = new Highway.Core({
  */
 // import Swiper JS
 import Swiper from 'swiper';
+import 'swiper/css';
 
 function initSwiper() {
 	const swiper = new Swiper('.swiper', {
