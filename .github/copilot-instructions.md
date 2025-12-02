@@ -3,24 +3,32 @@
 ## Commit Style
 - Use imperative mood (e.g., "Add feature" not "Added feature")
 - Keep it concise and descriptive
-- Examples: "Migrate to TypeScript", "Add ESLint and code formatting", "Remove deprecated @types/react-native"
+- Examples: "Update dependencies", "Add gallery section", "Fix navigation styling"
 
 ## Project Overview
-- React Native Expo app
-- TypeScript
-- Navigation: React Navigation (Native Stack)
-- Image picker functionality
+- Static site built with Eleventy 3.x (11ty)
+- Liquid templating
+- TypeScript for scripts
+- Tailwind CSS 3.x with PostCSS/Sass
+- Swiper for galleries
+- GSAP for animations
+- Highway.js for page transitions
 
 ## Development
-- `npm start` - Start Expo dev server
-- `npm run ios` - Run on iOS
-- `npm run android` - Run on Android
-- `npm run lint` - Check code style
-- `npm run lint:fix` - Auto-fix code style issues
+- `npm run dev` - Start dev server with hot reload
+- `npm run build` - Production build
+- `npm run serve` - Serve built files
+
+## Project Structure
+- `views/` - Liquid templates and data files
+- `src/scripts/` - TypeScript source files
+- `src/styles/` - SCSS stylesheets
+- `src/images/` - Image assets
+- `dist/` - Build output
 
 ## Code Style
-- ESLint with TypeScript, React, and React Native rules
-- 4-space indentation
+- ES Modules (type: module)
+- TypeScript for scripts
+- Tabs for indentation
 - Single quotes
 - Semicolons required
-- Max line length: 120 characters
