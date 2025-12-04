@@ -1,17 +1,11 @@
 // https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/
-// Fluid Type Mixin
+// Fluid Type Mixin - Using modern CSS clamp() without Sass functions
 @mixin fluid-type($min-value, $max-value, $line-height: 1.5) {
-	$min-vw: 25rem; // 400px;
-	$max-vw: 100rem; // 1600px;
-	$factor: calc(1 / ($max-vw - $min-vw)) * ($max-value - $min-value);
-	$calc-value: unquote("#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }");
+	$min-vw: 25rem; // 400px
+	$max-vw: 100rem; // 1600px
 
 	font-size: $min-value; // Fallback for older browsers
-	font-size: clamp(
-		#{if($min-value > $max-value, $max-value, $min-value)},
-		#{$calc-value},
-		#{if($min-value > $max-value, $min-value, $max-value)}
-	);
+	font-size: clamp(#{$min-value}, calc(#{$min-value} + (#{$max-value} - #{$min-value}) * ((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))), #{$max-value});
 	line-height: $line-height;
 
 	@media (min-width: $max-vw) {
