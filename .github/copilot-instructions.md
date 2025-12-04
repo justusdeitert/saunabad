@@ -15,9 +15,12 @@
 - Highway.js for page transitions
 
 ## Development
-- `npm run dev` - Start dev server with hot reload
-- `npm run build` - Production build
-- `npm run serve` - Serve built files
+- `yarn dev` - Start dev server with hot reload
+- `yarn build` - Production build
+- `yarn serve` - Serve built files
+
+## Package Manager
+- Use Yarn (not npm)
 
 ## Project Structure
 - `views/` - Liquid templates and data files

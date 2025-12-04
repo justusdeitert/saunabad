@@ -1,9 +1,7 @@
 // tailwind.config.js
-import colors from 'tailwindcss/colors.js';
 import customColors from './colors.json' with { type: 'json' };
 
 export default {
-	content: ['./src/**/*.{js, scss}', './views/**/*.liquid'],
 	theme: {
 		screens: {
 			sm: '480px',
@@ -14,12 +12,6 @@ export default {
 		colors: {
 			transparent: 'transparent',
 			current: 'currentColor',
-			// black: colors.black,
-			// white: colors.white,
-			// gray: colors.gray,
-			// indigo: colors.indigo,
-			// red: colors.rose,
-			// yellow: colors.amber,
 			blue: customColors.blue,
 			yellow: customColors.yellow,
 			green: customColors.green,
@@ -33,12 +25,6 @@ export default {
 			serif: ['Rosario', 'ui-serif', 'Georgia'],
 			display: ['Limelight', 'Oswald'],
 		},
-		// extend: {
-		// 	backgroundImage: {
-		// 		"hero-pattern": "url('/img/hero-pattern.svg')",
-		// 		"footer-texture": "url('/img/footer-texture.png')",
-		// 	},
-		// },
 	},
 	plugins: [],
 };

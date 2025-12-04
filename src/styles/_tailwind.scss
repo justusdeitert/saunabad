@@ -1,4 +1,107 @@
-// Tailwind
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// Tailwind v4
+@import 'tailwindcss';
+
+// Theme configuration (mirrors tailwind.config.js)
+@theme {
+	// Screens
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1640px;
+
+	// Colors - Blue
+	--color-blue-50: #BED9E3;
+	--color-blue-100: #B0D1DD;
+	--color-blue-200: #93C0D1;
+	--color-blue-300: #77AFC5;
+	--color-blue-400: #5A9FB9;
+	--color-blue-500: #468AA4;
+	--color-blue-600: #35697D;
+	--color-blue-700: #244855;
+	--color-blue-800: #14272E;
+	--color-blue-900: #030607;
+	--color-blue: #468AA4;
+
+	// Colors - Yellow
+	--color-yellow-50: #FFFFFF;
+	--color-yellow-100: #FFFFFF;
+	--color-yellow-200: #FFF9E8;
+	--color-yellow-300: #FFEEC0;
+	--color-yellow-400: #FFE297;
+	--color-yellow-500: #FFD76E;
+	--color-yellow-600: #FFC836;
+	--color-yellow-700: #FDB700;
+	--color-yellow-800: #C58E00;
+	--color-yellow-900: #8D6600;
+	--color-yellow: #FFD76E;
+
+	// Colors - Green
+	--color-green-50: #E6F1E2;
+	--color-green-100: #DAEAD4;
+	--color-green-200: #C2DDB8;
+	--color-green-300: #AAD09C;
+	--color-green-400: #93C381;
+	--color-green-500: #7BB665;
+	--color-green-600: #5F9A49;
+	--color-green-700: #477437;
+	--color-green-800: #304E25;
+	--color-green-900: #192813;
+	--color-green: #7BB665;
+
+	// Colors - Shilo
+	--color-shilo-50: #FFFFFF;
+	--color-shilo-100: #FFFFFF;
+	--color-shilo-200: #FFFFFF;
+	--color-shilo-300: #FBF3F0;
+	--color-shilo-400: #F1D9D1;
+	--color-shilo-500: #E8C0B1;
+	--color-shilo-600: #DB9D86;
+	--color-shilo-700: #CE7A5A;
+	--color-shilo-800: #BA5B37;
+	--color-shilo-900: #8F452A;
+	--color-shilo: #E8C0B1;
+
+	// Colors - Lila
+	--color-lila-50: #FFFFFF;
+	--color-lila-100: #FFFFFF;
+	--color-lila-200: #FEFEFE;
+	--color-lila-300: #ECE4F0;
+	--color-lila-400: #D9CAE1;
+	--color-lila-500: #C7B0D2;
+	--color-lila-600: #AE8CBE;
+	--color-lila-700: #9469A9;
+	--color-lila-800: #774F8B;
+	--color-lila-900: #593B67;
+	--color-lila: #C7B0D2;
+
+	// Colors - Dark
+	--color-dark-50: #847579;
+	--color-dark-100: #7A6C6F;
+	--color-dark-200: #64585B;
+	--color-dark-300: #4E4548;
+	--color-dark-400: #393234;
+	--color-dark-500: #231F20;
+	--color-dark-600: #050505;
+	--color-dark-700: #000000;
+	--color-dark-800: #000000;
+	--color-dark-900: #000000;
+	--color-dark: #231F20;
+
+	// Colors - Zest
+	--color-zest-50: #F8D9BF;
+	--color-zest-100: #F6CEAC;
+	--color-zest-200: #F2B887;
+	--color-zest-300: #EEA363;
+	--color-zest-400: #EA8D3E;
+	--color-zest-500: #E67719;
+	--color-zest-600: #B35D13;
+	--color-zest-700: #81430E;
+	--color-zest-800: #4E2808;
+	--color-zest-900: #1C0E03;
+	--color-zest: #E67719;
+
+	// Font families
+	--font-sans: 'Mukta', ui-sans-serif, system-ui;
+	--font-serif: 'Rosario', ui-serif, Georgia;
+	--font-display: 'Limelight', Oswald;
+}

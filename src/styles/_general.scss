@@ -1,5 +1,5 @@
 html {
-	color: theme('colors.dark.500');
+	color: var(--color-dark-500);
 }
 
 table {
@@ -9,7 +9,7 @@ table {
 		padding-right: 16vw;
 	}
 
-	@media screen(md) {
+	@media (width >= 768px) {
 		td:first-child {
 			padding-right: 9vw;
 		}
