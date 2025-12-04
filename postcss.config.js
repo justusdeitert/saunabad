@@ -5,7 +5,7 @@ export default {
 	plugins: [
 		(await import('postcss-import')).default,
 		(await import('@csstools/postcss-sass')).default,
-		(await import('@tailwindcss/postcss')).default({ configPath: './tailwind.config.js' }),
+		(await import('@tailwindcss/postcss')).default,
 		(await import('autoprefixer')).default,
 		isProd && (await import('cssnano')).default({ preset: 'default' }),
 	],
