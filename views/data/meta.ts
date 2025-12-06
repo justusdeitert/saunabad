@@ -1,9 +1,24 @@
+interface OpenGraph {
+	title: string;
+	description: string;
+	url: string;
+	type: string;
+	image: string;
+	locale: string;
+}
+
+interface Meta {
+	description: string;
+	url: string;
+	og: OpenGraph;
+}
+
 const title = 'Saunabad Berlin - Sauna und Wellness in Prenzlauer Berg';
 const description =
 	'Unser familiäres Kiez-Saunabad befindet sich in Prenzlauer Berg. In der Blockbohlensauna erwarten Sie Aroma-Aufgüsse mit Blick in unseren Sauna-Garten.';
 const url = 'https://www.saunabad-berlin.de';
 
-export default {
+const meta: Meta = {
 	description: description,
 	url: url,
 	og: {
@@ -15,3 +30,5 @@ export default {
 		locale: 'de_DE',
 	},
 };
+
+export default meta;

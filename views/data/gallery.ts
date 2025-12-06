@@ -1,4 +1,10 @@
-export default [
+interface GalleryItem {
+	title: string;
+	description: string;
+	image: string;
+}
+
+const gallery: GalleryItem[] = [
 	{
 		title: 'Saunagarten',
 		description:
@@ -18,9 +24,9 @@ export default [
 		image: './src/images/lesesaal.jpg',
 	},
 	{
-		title: "Bar",
-		description: "Genießen Sie ein paar leckere Getränke an unserer Bar.",
-		image: "./src/images/bar.jpg",
+		title: 'Bar',
+		description: 'Genießen Sie ein paar leckere Getränke an unserer Bar.',
+		image: './src/images/bar.jpg',
 	},
 	{
 		title: 'Privatsphäre',
@@ -35,3 +41,5 @@ export default [
 		image: './src/images/im_garten.jpg',
 	},
 ];
+
+export default gallery;

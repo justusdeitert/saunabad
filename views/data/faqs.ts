@@ -1,4 +1,9 @@
-export default [
+interface FAQ {
+	title: string;
+	body: string;
+}
+
+const faqs: FAQ[] = [
 	{
 		title: 'Wie viele Saunen gibt es?',
 		body: 'Eine 100 Grad-Blockbohlen-Sauna in unserem Saunagarten und eine großzügige 80 Grad Innensauna.',
@@ -24,3 +29,5 @@ export default [
 		body: 'Um die Privatsphäre unsere Gäste zu respektieren, ist das Mitführen von Mobiltelefonen in unserer Anlage verboten. Bitte lassen Sie deshalb Ihre Mobiltelefone in Ihren Saunaschrank. Dies gilt auch für andere technische Geräte, die eine Video-oder Fotofunktion integriert haben. Das Mitführen dieser Geräte ist in unserer Anlage verboten.',
 	},
 ];
+
+export default faqs;
