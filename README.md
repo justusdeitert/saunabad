@@ -36,6 +36,14 @@ A modern, performant static website for **Saunabad Berlin** – a cozy neighborh
 ```
 saunabad/
 ├── dist/                    # Build output (generated)
+├── lib/                     # Build utilities & config helpers
+│   ├── shortcodes/
+│   │   └── image.ts         # Responsive image shortcode
+│   ├── transforms/
+│   │   └── htmlmin.ts       # HTML minification
+│   └── types/
+│       ├── eleventy.d.ts    # Eleventy type definitions
+│       └── highway.d.ts     # Highway.js type definitions
 ├── src/
 │   ├── images/              # Source images
 │   ├── scripts/
@@ -46,31 +54,27 @@ saunabad/
 │       ├── _font.scss       # Typography styles
 │       ├── _general.scss    # General styles
 │       ├── _swiper.scss     # Swiper overrides
-│       └── _tailwind.scss   # Tailwind imports
+│       └── _tailwind.scss   # Tailwind config & imports
 ├── views/
-│   ├── data/                # Global data files
+│   ├── _data/               # Global data files (TypeScript)
 │   │   ├── faqs.ts          # FAQ content
 │   │   ├── gallery.ts       # Gallery images
 │   │   └── meta.ts          # SEO metadata
-│   ├── includes/
+│   ├── _includes/           # Reusable template partials
+│   │   ├── components/      # UI components
+│   │   │   └── accordion.liquid
 │   │   ├── icons/           # SVG icon partials
-│   │   └── partials/        # Reusable components
-│   │       ├── accordion.liquid
-│   │       ├── footer.liquid
-│   │       ├── nav.liquid
-│   │       └── sections/    # Page sections
+│   │   ├── sections/        # Page sections
+│   │   ├── footer.liquid
+│   │   └── nav.liquid
 │   ├── layouts/
 │   │   └── base.liquid      # Base HTML template
 │   ├── index.liquid         # Homepage
 │   ├── datenschutz.liquid   # Privacy policy
 │   ├── impressum.liquid     # Legal notice
 │   └── sitemap.liquid       # XML sitemap
-├── types/                   # TypeScript type definitions
-├── utils/                   # Utility functions
-├── colors.json              # Custom color palette
 ├── eleventy.config.ts       # Eleventy configuration
 ├── postcss.config.ts        # PostCSS configuration
-├── tailwind.config.ts       # Tailwind configuration
 ├── tsconfig.json            # TypeScript configuration
 └── package.json
 ```
@@ -134,27 +138,28 @@ yarn serve
 
 ## 🎨 Color Palette
 
-The project uses a custom color palette defined in [colors.json](colors.json):
+The project uses a custom color palette defined in [_tailwind.scss](src/styles/_tailwind.scss):
 
 | Color | Default | Usage |
 |-------|---------|-------|
 | 🔵 Blue | `#468AA4` | Primary brand color |
 | 🟡 Yellow | `#FFD76E` | Accent color |
 | 🟢 Green | `#7BB665` | Secondary accent |
+| 🟠 Shilo | `#E8C0B1` | Warm accent |
 
 ## 🔧 Configuration
 
 ### Eleventy
 
 Configuration is in [eleventy.config.ts](eleventy.config.ts):
-- Custom `{% image %}` shortcode for responsive images
+- Custom `{% image %}` shortcode for responsive images (see [lib/shortcodes/image.ts](lib/shortcodes/image.ts))
 - Cache-busting `{% hash %}` shortcode
-- HTML minification transform (production only)
+- HTML minification transform (production only, see [lib/transforms/htmlmin.ts](lib/transforms/htmlmin.ts))
 - Navigation plugin
 
 ### Tailwind CSS
 
-Tailwind 4.x is configured via PostCSS with custom colors imported from `colors.json`.
+Tailwind 4.x is configured via the `@theme` directive in [_tailwind.scss](src/styles/_tailwind.scss) — no separate config file needed.
 
 ### TypeScript
 
