@@ -4,8 +4,6 @@ A modern, performant static website for **Saunabad Berlin** – a cozy neighborh
 
 🌐 **Live Site:** [saunabad-berlin.de](https://www.saunabad-berlin.de)
 
----
-
 ## ✨ Features
 
 - **Static Site Generation** with [Eleventy 3.x](https://www.11ty.dev/)
@@ -18,8 +16,6 @@ A modern, performant static website for **Saunabad Berlin** – a cozy neighborh
 - **Responsive Images** with automatic WebP/JPEG generation
 - **HTML Minification** in production builds
 - **SEO Optimized** with OpenGraph & Twitter meta tags
-
----
 
 ## 🛠️ Tech Stack
 
@@ -34,8 +30,6 @@ A modern, performant static website for **Saunabad Berlin** – a cozy neighborh
 | Gallery | Swiper |
 | Build Tools | esbuild, PostCSS CLI |
 | Package Manager | Yarn |
-
----
 
 ## 📁 Project Structure
 
@@ -80,8 +74,6 @@ saunabad/
 ├── tsconfig.json            # TypeScript configuration
 └── package.json
 ```
-
----
 
 ## 🚀 Getting Started
 
@@ -129,8 +121,6 @@ Production builds include:
 yarn serve
 ```
 
----
-
 ## 📜 Available Scripts
 
 | Command | Description |
@@ -142,8 +132,6 @@ yarn serve
 | `yarn dev:postcss` | Run only PostCSS in watch mode |
 | `yarn dev:esbuild` | Run only esbuild in watch mode |
 
----
-
 ## 🎨 Color Palette
 
 The project uses a custom color palette defined in [colors.json](colors.json):
@@ -153,8 +141,6 @@ The project uses a custom color palette defined in [colors.json](colors.json):
 | 🔵 Blue | `#468AA4` | Primary brand color |
 | 🟡 Yellow | `#FFD76E` | Accent color |
 | 🟢 Green | `#7BB665` | Secondary accent |
-
----
 
 ## 🔧 Configuration
 
@@ -174,8 +160,6 @@ Tailwind 4.x is configured via PostCSS with custom colors imported from `colors.
 
 TypeScript is configured for ES Modules with strict type checking. See [tsconfig.json](tsconfig.json).
 
----
-
 ## 📝 Code Style
 
 - **Indentation:** Tabs
@@ -183,13 +167,10 @@ TypeScript is configured for ES Modules with strict type checking. See [tsconfig
 - **Semicolons:** Required
 - **Module System:** ES Modules
 
----
 
 ## 📄 License
 
 This project is licensed under the MIT License.
-
----
 
 ## 🙏 Acknowledgments
 
