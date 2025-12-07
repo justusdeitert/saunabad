@@ -1,14 +1,14 @@
-<div class="accordion">
+<div class="accordion space-y-3">
     {% for faq in faqs %}
-    <div class="accordion__collapse {% if forloop.first == false %}border-t{% endif %}">
-        <div class="relative flex items-center cursor-pointer accordion__header pr-7 pr:w-[2vw]">
-            <h5 class="my-3 lg:my-[1vw]">
+    <div class="accordion__collapse bg-sand/60 rounded-lg border border-copper/10 overflow-hidden">
+        <div class="relative flex items-center cursor-pointer accordion__header px-5 py-4 hover:bg-sand transition-colors">
+            <h5 class="my-0 text-forest font-medium pr-8">
                 {{ faq.title }}
             </h5>
-            {% include 'icons/icon-chevron-down' classnames: 'w-5 lg:w-[1.6vw] stroke-dark absolute right-0' %}
+            {% include 'icons/icon-chevron-down' classnames: 'w-5 lg:w-[1.4vw] stroke-copper absolute right-4 transition-transform duration-300' %}
         </div>
-        <div class="hidden accordion__body mb-3 lg:mb-[1vw]">
-            <p>
+        <div class="hidden accordion__body px-5 pb-4">
+            <p class="text-charcoal/70 leading-relaxed">
                 {{ faq.body }}
             </p>
         </div>

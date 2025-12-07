@@ -1,17 +1,28 @@
 html {
-	color: var(--color-dark-500);
+	color: var(--color-charcoal);
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--color-cream);
+}
+
+// Selection styling
+::selection {
+	background-color: var(--color-copper);
+	color: var(--color-cream);
 }
 
 table {
 	@apply table-fixed mb-[1vw];
 
 	td:first-child {
-		padding-right: 16vw;
+		padding-right: 8vw;
 	}
 
 	@media (width >= 768px) {
 		td:first-child {
-			padding-right: 9vw;
+			padding-right: 6vw;
 		}
 	}
 }
@@ -22,8 +33,13 @@ ol {
 	@apply pl-6 my-[1vw] text-base;
 }
 
+// Link hover effects
+a {
+	transition: color 0.2s ease-in-out;
+}
+
 .transition-fade {
-	transition: 0.1s ease-in-out;
+	transition: 0.2s ease-in-out;
 	opacity: 1;
 }
 
@@ -45,12 +61,11 @@ html {
 }
 
 .coming {
-	animation: coming 0.4s forwards cubic-bezier(0.25, 1, 0.5, 1);
+	animation: coming 0.5s forwards cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 @keyframes going {
 	from {
-		// opacity: 1;
 		transform: translateY(0px);
 	}
 	to {
@@ -64,8 +79,24 @@ html {
 	animation-delay: 0.15s;
 }
 
+// Smooth fade-in animation for sections
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in-up {
+	animation: fadeInUp 0.8s ease-out forwards;
+}
+
 .offset {
-	@apply mb-8 md:mb-[4vw];
+	@apply mb-8 md:mb-[3vw];
 }
 
 .wrapper {
@@ -76,4 +107,22 @@ html {
 	display: block;
 	content: '';
 	padding-bottom: 100%;
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-copper);
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-copper-600);
 }

@@ -1,110 +1,131 @@
-<section id="info" class="bg-blue">
-    <div
-        class="mx-auto md:grid md:grid-cols-5 lg:grid-cols-12 pt-36 pb-16 px-8 sm:px-16 md:px-0 md:py-[8vw] md:pt-[16vw]">
-        <article class="md:col-span-3 lg:col-span-8 lg:max-w-[80%] mx-auto md:px-[4vw]">
+<section id="info" class="bg-cream relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-copper/30 to-transparent"></div>
+    <div class="absolute -left-20 top-1/4 w-40 h-40 bg-forest/5 rounded-full blur-3xl"></div>
+    <div class="absolute -right-20 bottom-1/4 w-60 h-60 bg-copper/5 rounded-full blur-3xl"></div>
+
+    <div class="mx-auto md:grid md:grid-cols-5 lg:grid-cols-12 pt-24 pb-16 px-8 sm:px-16 md:px-0 md:py-[8vw] relative z-10">
+        <article class="md:col-span-3 lg:col-span-8 lg:max-w-[85%] mx-auto md:px-[4vw]">
+            <!-- Intro text -->
             <div class="offset">
-                <h5>Das Saunabad Berlin ist eine Ruheoase inmitten von Berlin. Hier im belebten Stadtbezirk Prenzlauer
-                    Berg kann man sich bei uns eine Auszeit gönnen. Das Saunabad bietet zwei Saunen. Eine 100
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-[2px] bg-copper"></div>
+                    <span class="text-copper uppercase tracking-[0.2em] text-sm">Willkommen</span>
+                </div>
+                <h5 class="text-charcoal leading-relaxed">Das Saunabad Berlin ist eine Ruheoase inmitten von Berlin. Hier im belebten Stadtbezirk Prenzlauer
+                    Berg kann man sich bei uns eine Auszeit gönnen. Das Saunabad bietet zwei Saunen: Eine 100
                     Grad-Blockbohlen-Sauna in unserem Saunagarten und eine großzügige 80 Grad Innensauna. Zu jeder 
                     vollen Stunde gibt es Aufgüsse mit hochwertigen, naturreinen, ätherischen Ölen.</h5>
             </div>
+
+            <!-- Opening hours -->
             <div class="offset">
-                <h3>Öffnungszeiten</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Montag</td>
-                            <td>15 - 24 Uhr</td>
-                        </tr>
-                        <tr>
-                            <td>Dienstag</td>
-                            <td>15 - 24 Uhr</td>
-                        </tr>
-                        <tr>
-                            <td>Mittwoch</td>
-                            <td>15 - 24 Uhr</td>
-                        </tr>
-                        <tr>
-                            <td>Donnerstag</td>
-                            <td>15 - 24 Uhr</td>
-                        </tr>
-                        <tr>
-                            <td>Freitag</td>
-                            <td>15 - 24 Uhr</td>
-                        </tr>
-                        <tr>
-                            <td>Sonnabend</td>
-                            <td>15 - 24 Uhr</td>
-                        </tr>
-                        <tr>
-                            <td>Sonntag</td>
-                            <td>12 - 24 Uhr</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h3 class="text-forest font-display tracking-wide">Öffnungszeiten</h3>
+                <div class="bg-sand/50 rounded-lg p-6 border border-copper/10">
+                    <table class="w-full">
+                        <tbody class="text-charcoal">
+                            <tr class="border-b border-copper/10">
+                                <td class="py-2">Montag</td>
+                                <td class="py-2 text-right font-medium">15 - 24 Uhr</td>
+                            </tr>
+                            <tr class="border-b border-copper/10">
+                                <td class="py-2">Dienstag</td>
+                                <td class="py-2 text-right font-medium">15 - 24 Uhr</td>
+                            </tr>
+                            <tr class="border-b border-copper/10">
+                                <td class="py-2">Mittwoch</td>
+                                <td class="py-2 text-right font-medium">15 - 24 Uhr</td>
+                            </tr>
+                            <tr class="border-b border-copper/10">
+                                <td class="py-2">Donnerstag</td>
+                                <td class="py-2 text-right font-medium">15 - 24 Uhr</td>
+                            </tr>
+                            <tr class="border-b border-copper/10">
+                                <td class="py-2">Freitag</td>
+                                <td class="py-2 text-right font-medium">15 - 24 Uhr</td>
+                            </tr>
+                            <tr class="border-b border-copper/10">
+                                <td class="py-2">Sonnabend</td>
+                                <td class="py-2 text-right font-medium">15 - 24 Uhr</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2">Sonntag</td>
+                                <td class="py-2 text-right font-medium text-terracotta">12 - 24 Uhr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
+            <!-- FAQ Accordion -->
             <div class="offset">
-                <h3>Saunainfos & Regeln</h3>
+                <h3 class="text-forest font-display tracking-wide">Saunainfos & Regeln</h3>
                 {% include 'components/accordion' %}
             </div>
         </article>
+
+        <!-- Sidebar with prices -->
         <div class="md:h-full md:col-span-2 lg:col-span-4 md:px-[4vw] relative">
-            <div class="bg-yellow w-[3vw] h-[105%] hidden md:block absolute left-[-2vw] mt-[-2vw]"></div>
-            <div class="sticky top-32">
-                <div class="offset">
-                    <h3>Eintrittspreise</h3>
-                    <table>
+            <div class="bg-gradient-to-b from-copper/20 to-copper/5 w-[3px] h-[105%] hidden md:block absolute left-[-1vw] mt-[-2vw] rounded-full"></div>
+            <div class="sticky top-24">
+                <!-- Entry prices card -->
+                <div class="offset bg-forest rounded-xl p-6 md:p-8 shadow-xl">
+                    <h3 class="text-cream font-display tracking-wide border-b border-cream/20 pb-3 mb-4">Eintrittspreise</h3>
+                    <table class="w-full text-cream/90">
                         <tbody>
-                            <tr>
-                                <td>4 Stunden</td>
-                                <td>€ 22,00</td>
-                            
+                            <tr class="border-b border-cream/10">
+                                <td class="py-3">4 Stunden</td>
+                                <td class="py-3 text-right text-copper font-bold text-lg">€ 22,00</td>
                             </tr>
                             <tr>
-                                <td>2,5 Stunden</td>
-                                <td>€ 20,00</td>
+                                <td class="py-3">2,5 Stunden</td>
+                                <td class="py-3 text-right text-copper font-bold text-lg">€ 20,00</td>
                             </tr>
                         </tbody>
                     </table>
-                    <a href="#preise" class="flex items-center underline align-center">
-                        <p>weitere Infos</p>
-                        {% include 'icons/icon-arrow-right' classnames: 'w-5 lg:w-[1.6vw] stroke-dark' %}
+                    <a href="#preise" class="flex items-center justify-center gap-2 mt-4 bg-copper/20 hover:bg-copper/30 border border-copper/40 rounded-full px-4 py-2 text-copper text-sm transition-all">
+                        <span>Alle Preise ansehen</span>
+                        {% include 'icons/icon-arrow-right' classnames: 'w-4 stroke-current' %}
                     </a>
                 </div>
-                <div class="offset">
-                    <h3>Leihgebühren</h3>
-                    <table>
+
+                <!-- Rental prices -->
+                <div class="offset bg-sand/60 rounded-xl p-6 border border-copper/10">
+                    <h3 class="text-forest font-display tracking-wide">Leihgebühren</h3>
+                    <table class="w-full text-charcoal">
                         <tbody>
-                            <tr>
-                                <td>Bademantel</td>
-                                <td>€ 3,50</td>
+                            <tr class="border-b border-copper/10">
+                                <td class="py-2">Bademantel</td>
+                                <td class="py-2 text-right font-medium">€ 3,50</td>
+                            </tr>
+                            <tr class="border-b border-copper/10">
+                                <td class="py-2">Handtuch</td>
+                                <td class="py-2 text-right font-medium">€ 3,00</td>
                             </tr>
                             <tr>
-                                <td>Handtuch</td>
-                                <td>€ 3,00</td>
-                            </tr>
-                            <tr>
-                                <td>Badeschuhe</td>
-                                <td>€ 1,00</td>
+                                <td class="py-2">Badeschuhe</td>
+                                <td class="py-2 text-right font-medium">€ 1,00</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div>
-                    <h3>Preise für Massagen</h3>
-                    <table>
+
+                <!-- Massage prices -->
+                <div class="bg-terracotta/10 rounded-xl p-6 border border-terracotta/20">
+                    <h3 class="text-terracotta-700 font-display tracking-wide">Preise für Massagen</h3>
+                    <table class="w-full text-charcoal">
                         <tbody>
-                            <tr>
-                                <td>30 Minuten</td>
-                                <td>€ 33,00</td>
+                            <tr class="border-b border-terracotta/10">
+                                <td class="py-2">30 Minuten</td>
+                                <td class="py-2 text-right font-medium">€ 33,00</td>
+                            </tr>
+                            <tr class="border-b border-terracotta/10">
+                                <td class="py-2">45 Minuten</td>
+                                <td class="py-2 text-right font-medium">€ 47,00</td>
                             </tr>
                             <tr>
-                                <td>45 Minuten</td>
-                                <td>€ 47,00</td>
-                            </tr>
-                            <tr>
-                                <td>60 Minuten</td>
-                                <td>€ 60,00</td>
+                                <td class="py-2">60 Minuten</td>
+                                <td class="py-2 text-right font-medium">€ 60,00</td>
                             </tr>
                         </tbody>
                     </table>

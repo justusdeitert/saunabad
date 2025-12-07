@@ -1,33 +1,63 @@
-<footer id="footer" class="{{ colorClass }} pt-8 md:pt-[8vw] pb-0 md:pb-[5vw] px-8 sm:px-16 md:px-[6vw]">
-    <div class="grid grid-cols-1 gap-20 md:grid-cols-2">
-        <div class="items-center justify-center hidden md:flex">
-            <p class="text-center">Wir freuen uns Sie in unserem <br> Saunabad begrüßen zu dürfen.
-            </p>
-        </div>
-        <div class="relative flex flex-col items-center justify-center">
-            <div class="absolute -left-[1.5vw] w-[3vw] -top-[20%] h-[140%] bg-yellow hidden md:block"></div>
-            {% include 'icons/icon-house' classnames: 'w-8 lg:w-[3vw] stroke-dark' %}
-            <p class="max-w-md mx-auto mt-4 text-center">Rykestraße 10 <br> 10405 Berlin</p>
+<footer id="footer" class="bg-charcoal relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-forest via-copper to-terracotta"></div>
+    <div class="absolute -right-40 -bottom-40 w-96 h-96 bg-forest/10 rounded-full blur-3xl"></div>
+    <div class="absolute -left-40 -top-40 w-80 h-80 bg-copper/10 rounded-full blur-3xl"></div>
+
+    <div class="pt-16 md:pt-[8vw] pb-8 md:pb-[4vw] px-8 sm:px-16 md:px-[6vw] relative z-10">
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-8 max-w-6xl mx-auto">
+            <!-- Brand column -->
+            <div class="text-center md:text-left">
+                <h3 class="font-display text-copper text-2xl tracking-wide mb-4">Saunabad Berlin</h3>
+                <p class="text-cream/60 leading-relaxed">Wir freuen uns Sie in unserem Saunabad begrüßen zu dürfen.</p>
+                <div class="w-12 h-[2px] bg-copper/40 mt-6 mx-auto md:mx-0"></div>
+            </div>
+
+            <!-- Contact column -->
+            <div class="text-center">
+                <h4 class="text-cream/40 uppercase tracking-[0.2em] text-xs mb-6">Kontakt</h4>
+                <div class="flex flex-col items-center gap-4">
+                    <div class="flex items-center gap-3 text-cream/80">
+                        {% include 'icons/icon-house' classnames: 'w-5 stroke-copper' %}
+                        <span>Rykestraße 10, 10405 Berlin</span>
+                    </div>
+                    <a href="tel:+493044046397" class="flex items-center gap-3 text-cream/80 hover:text-copper transition-colors">
+                        {% include 'icons/icon-phone' classnames: 'w-5 stroke-copper' %}
+                        <span>030 44046397</span>
+                    </a>
+                    <a href="mailto:info@saunabad-berlin.de" class="flex items-center gap-3 text-cream/80 hover:text-copper transition-colors">
+                        {% include 'icons/icon-mail' classnames: 'w-5 stroke-copper' %}
+                        <span>info@saunabad-berlin.de</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social column -->
+            <div class="text-center md:text-right">
+                <h4 class="text-cream/40 uppercase tracking-[0.2em] text-xs mb-6">Folgen Sie uns</h4>
+                <div class="flex justify-center md:justify-end gap-4">
+                    <a href="https://www.instagram.com/saunabad_berlin/" target="_blank" 
+                       class="w-10 h-10 rounded-full border border-copper/30 flex items-center justify-center text-cream/60 hover:bg-copper hover:text-cream hover:border-copper transition-all">
+                        {% include 'icons/icon-instagram' classnames: 'w-5 stroke-current' %}
+                    </a>
+                    <a href="https://www.facebook.com/Saunabad-Berlin-Prenzlauer-Berg-176322405726284/" target="_blank"
+                       class="w-10 h-10 rounded-full border border-copper/30 flex items-center justify-center text-cream/60 hover:bg-copper hover:text-cream hover:border-copper transition-all">
+                        {% include 'icons/icon-facebook' classnames: 'w-5 stroke-current' %}
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
 
-<section class="{{ colorClass }} flex flex-col-reverse items-center gap-8 px-6 md:px-[2vw] pb-8 py-6 md:py-[2vw] md:flex-row">
-    <div class="flex -mx-[1vw]">
-        <a href="https://www.instagram.com/saunabad_berlin/" target="_blank" class="mx-[0.5vw]">
-            {% include 'icons/icon-instagram' classnames: 'w-5 lg:w-[1.6vw] stroke-dark' %}
-        </a>
-        <a href="https://www.facebook.com/Saunabad-Berlin-Prenzlauer-Berg-176322405726284/" target="_blank" class="mx-[0.5vw]">
-            {% include 'icons/icon-facebook' classnames: 'w-5 lg:w-[1.6vw] stroke-dark' %}
-        </a>
-    </div>
-    <nav class="flex flex-wrap justify-center uppercase -mx-[2vw] md:-mx-[1vw] md:ml-auto">
-        <div class="">
-            <!-- https://www.11ty.dev/docs/plugins/navigation/#advanced-all-rendering-options-for-eleventynavigationtohtml -->
-            {% assign navPages = collections.all | eleventyNavigation %}
-            {%- for entry in navPages %}
-            <a href="{{ entry.url | url }}" class="mx-[1vw] md:mx-[0.5vw]">{{ entry.title }}</a>
-            {%- endfor %}
-        </div>
+<!-- Bottom bar -->
+<section class="bg-charcoal-900 flex flex-col-reverse items-center gap-6 px-6 md:px-[3vw] py-6 md:flex-row border-t border-cream/5">
+    <p class="text-cream/30 text-sm">© {{ 'now' | date: '%Y' }} Saunabad Berlin. Alle Rechte vorbehalten.</p>
+    
+    <nav class="flex flex-wrap justify-center gap-6 md:ml-auto">
+        {% assign navPages = collections.all | eleventyNavigation %}
+        {%- for entry in navPages %}
+        <a href="{{ entry.url | url }}" class="text-cream/50 hover:text-copper text-sm uppercase tracking-wide transition-colors">{{ entry.title }}</a>
+        {%- endfor %}
     </nav>
 </section>
