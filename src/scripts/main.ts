@@ -1,16 +1,22 @@
 import Highway from '@dogstudio/highway';
-import Tailwind from '../../tailwind.config';
 import { gsap } from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
+interface TransitionParams {
+	from: HTMLElement;
+	to: HTMLElement;
+	done: () => void;
+}
 
 /**
  * Page Transition with Highway.js
  */
 class Fade extends Highway.Transition {
-	in({ from, to, done }) {
+	in({ from, to, done }: TransitionParams) {
 		// Animation
-		const main: HTMLElement = to.querySelector('main');
+		const main = to.querySelector('main');
+		if (!main) return done();
+		
 		const sections: NodeListOf<HTMLElement> = main.querySelectorAll('section, footer, header');
 
 		// Reset Scroll
@@ -32,7 +38,7 @@ class Fade extends Highway.Transition {
 		done();
 	}
 
-	out({ from, done }) {
+	out({ from, done }: TransitionParams) {
 		// Animation
 		// from.style.opacity = 0;
 
