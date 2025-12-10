@@ -4,13 +4,26 @@
 
 .accordion {
     &__collapse {
+        transition: all 0.3s ease;
+        
+        &:hover {
+            border-color: var(--color-copper);
+        }
+        
         &.open {
+            background-color: var(--color-sand);
+            border-color: var(--color-copper);
+            
             .accordion__body {
                 display: block;
             }
 
             svg {
                 transform: rotate(180deg);
+            }
+            
+            .accordion__header {
+                border-bottom: 1px solid rgba(var(--color-copper), 0.2);
             }
         }
     }

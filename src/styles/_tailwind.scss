@@ -1,7 +1,7 @@
 // Tailwind v4
 @import 'tailwindcss';
 
-// Theme configuration (mirrors tailwind.config.js)
+// Theme configuration - Saunabad Berlin Premium Spa Design
 @theme {
 	// Screens
 	--breakpoint-sm: 480px;
@@ -9,96 +9,105 @@
 	--breakpoint-lg: 1024px;
 	--breakpoint-xl: 1640px;
 
-	// Colors - Blue
-	--color-blue-50: #BED9E3;
-	--color-blue-100: #B0D1DD;
-	--color-blue-200: #93C0D1;
-	--color-blue-300: #77AFC5;
-	--color-blue-400: #5A9FB9;
-	--color-blue-500: #468AA4;
-	--color-blue-600: #35697D;
-	--color-blue-700: #244855;
-	--color-blue-800: #14272E;
-	--color-blue-900: #030607;
-	--color-blue: #468AA4;
+	// Colors - Forest (Primary - deep relaxing green)
+	--color-forest-50: #F4F7F5;
+	--color-forest-100: #E4ECE6;
+	--color-forest-200: #C5D6C9;
+	--color-forest-300: #9BB9A2;
+	--color-forest-400: #6E9878;
+	--color-forest-500: #4A7856;
+	--color-forest-600: #3A6145;
+	--color-forest-700: #2F4E38;
+	--color-forest-800: #263F2D;
+	--color-forest-900: #1E3325;
+	--color-forest: #2F4E38;
 
-	// Colors - Yellow
-	--color-yellow-50: #FFFFFF;
-	--color-yellow-100: #FFFFFF;
-	--color-yellow-200: #FFF9E8;
-	--color-yellow-300: #FFEEC0;
-	--color-yellow-400: #FFE297;
-	--color-yellow-500: #FFD76E;
-	--color-yellow-600: #FFC836;
-	--color-yellow-700: #FDB700;
-	--color-yellow-800: #C58E00;
-	--color-yellow-900: #8D6600;
-	--color-yellow: #FFD76E;
+	// Colors - Sand (Warm neutral cream)
+	--color-sand-50: #FDFCFA;
+	--color-sand-100: #FAF7F2;
+	--color-sand-200: #F5EFE4;
+	--color-sand-300: #EDE3D0;
+	--color-sand-400: #E2D4B8;
+	--color-sand-500: #D4C19A;
+	--color-sand-600: #C4AA78;
+	--color-sand-700: #A8895A;
+	--color-sand-800: #876E48;
+	--color-sand-900: #6B573A;
+	--color-sand: #F5EFE4;
 
-	// Colors - Green
-	--color-green-50: #E6F1E2;
-	--color-green-100: #DAEAD4;
-	--color-green-200: #C2DDB8;
-	--color-green-300: #AAD09C;
-	--color-green-400: #93C381;
-	--color-green-500: #7BB665;
-	--color-green-600: #5F9A49;
-	--color-green-700: #477437;
-	--color-green-800: #304E25;
-	--color-green-900: #192813;
-	--color-green: #7BB665;
+	// Colors - Terracotta (Warm earthy accent)
+	--color-terracotta-50: #FDF6F3;
+	--color-terracotta-100: #FAEBE4;
+	--color-terracotta-200: #F5D4C7;
+	--color-terracotta-300: #EDB79E;
+	--color-terracotta-400: #E39270;
+	--color-terracotta-500: #D4714D;
+	--color-terracotta-600: #C45A36;
+	--color-terracotta-700: #A3472C;
+	--color-terracotta-800: #853C28;
+	--color-terracotta-900: #6E3525;
+	--color-terracotta: #C45A36;
 
-	// Colors - Shilo
-	--color-shilo-50: #FFFFFF;
-	--color-shilo-100: #FFFFFF;
-	--color-shilo-200: #FFFFFF;
-	--color-shilo-300: #FBF3F0;
-	--color-shilo-400: #F1D9D1;
-	--color-shilo-500: #E8C0B1;
-	--color-shilo-600: #DB9D86;
-	--color-shilo-700: #CE7A5A;
-	--color-shilo-800: #BA5B37;
-	--color-shilo-900: #8F452A;
-	--color-shilo: #E8C0B1;
+	// Colors - Copper (Luxury warm accent)
+	--color-copper-50: #FBF7F4;
+	--color-copper-100: #F6EDE5;
+	--color-copper-200: #EDDBCB;
+	--color-copper-300: #E0C2A5;
+	--color-copper-400: #D1A47A;
+	--color-copper-500: #C08B5C;
+	--color-copper-600: #B07548;
+	--color-copper-700: #925E3C;
+	--color-copper-800: #774E36;
+	--color-copper-900: #61412F;
+	--color-copper: #C08B5C;
 
-	// Colors - Lila
-	--color-lila-50: #FFFFFF;
-	--color-lila-100: #FFFFFF;
-	--color-lila-200: #FEFEFE;
-	--color-lila-300: #ECE4F0;
-	--color-lila-400: #D9CAE1;
-	--color-lila-500: #C7B0D2;
-	--color-lila-600: #AE8CBE;
-	--color-lila-700: #9469A9;
-	--color-lila-800: #774F8B;
-	--color-lila-900: #593B67;
-	--color-lila: #C7B0D2;
+	// Colors - Charcoal (Rich dark with warm undertone)
+	--color-charcoal-50: #F6F5F5;
+	--color-charcoal-100: #E7E6E5;
+	--color-charcoal-200: #D2D0CE;
+	--color-charcoal-300: #B3B0AC;
+	--color-charcoal-400: #8D8983;
+	--color-charcoal-500: #726E69;
+	--color-charcoal-600: #5E5B56;
+	--color-charcoal-700: #4A4844;
+	--color-charcoal-800: #3A3836;
+	--color-charcoal-900: #2A2927;
+	--color-charcoal: #2A2927;
 
-	// Colors - Dark
-	--color-dark-50: #847579;
-	--color-dark-100: #7A6C6F;
-	--color-dark-200: #64585B;
-	--color-dark-300: #4E4548;
-	--color-dark-400: #393234;
-	--color-dark-500: #231F20;
-	--color-dark-600: #050505;
-	--color-dark-700: #000000;
-	--color-dark-800: #000000;
-	--color-dark-900: #000000;
-	--color-dark: #231F20;
+	// Colors - Cream (Light backgrounds)
+	--color-cream-50: #FFFFFF;
+	--color-cream-100: #FEFDFB;
+	--color-cream-200: #FCF9F5;
+	--color-cream-300: #F9F5EE;
+	--color-cream-400: #F5EFE6;
+	--color-cream-500: #F0E8DB;
+	--color-cream-600: #E5D9C7;
+	--color-cream-700: #D6C6AE;
+	--color-cream-800: #C4AD8E;
+	--color-cream-900: #A89172;
+	--color-cream: #F9F5EE;
 
-	// Colors - Zest
-	--color-zest-50: #F8D9BF;
-	--color-zest-100: #F6CEAC;
-	--color-zest-200: #F2B887;
-	--color-zest-300: #EEA363;
-	--color-zest-400: #EA8D3E;
-	--color-zest-500: #E67719;
-	--color-zest-600: #B35D13;
-	--color-zest-700: #81430E;
-	--color-zest-800: #4E2808;
-	--color-zest-900: #1C0E03;
-	--color-zest: #E67719;
+	// Colors - Stone (Neutral gray with warmth)
+	--color-stone-50: #FAFAF9;
+	--color-stone-100: #F5F4F2;
+	--color-stone-200: #E8E6E1;
+	--color-stone-300: #D6D3CC;
+	--color-stone-400: #B8B4AA;
+	--color-stone-500: #9A958A;
+	--color-stone-600: #7D786E;
+	--color-stone-700: #656158;
+	--color-stone-800: #524F48;
+	--color-stone-900: #44423C;
+	--color-stone: #D6D3CC;
+
+	// Legacy color aliases for compatibility
+	--color-blue: #2F4E38;
+	--color-yellow: #C08B5C;
+	--color-green: #4A7856;
+	--color-shilo: #EDB79E;
+	--color-lila: #F5EFE4;
+	--color-dark: #2A2927;
+	--color-zest: #C45A36;
 
 	// Font families
 	--font-sans: 'Mukta', ui-sans-serif, system-ui;

@@ -1,14 +1,36 @@
-<header id="hero" class="relative z-10 flex flex-col w-full bg-yellow bg-[url('/images/saunagarten_02.jpg')] bg-center bg-cover">
-    <div class="mx-auto rounded-full bg-yellow p-[2vw] relative -top-[1vw]">
-        <h2 class="flex flex-col justify-center items-center m-auto font-serif text-xl font-bold text-center uppercase py-[2vw] aspect-square !mb-0">
-            Saunabad <br> 
-            <span class="text-lg">Rykestraße</span>
-            <div class="square"></div>
-        </h2>
+<header id="hero" class="relative z-10 flex flex-col w-full min-h-[100vh] bg-charcoal">
+    <!-- Background image with overlay -->
+    <div class="absolute inset-0 bg-[url('/images/saunagarten_02.jpg')] bg-center bg-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/40 to-charcoal/90"></div>
     </div>
 
-    <div class="relative bottom-0 translate-y-2/4">
-        <h1 class="font-serif text-9xl leading-[1] text-center uppercase mb-0 text-shadow">Saunabad</h1>
-        <h3 class="text-2xl leading-[1.2] absolute w-full font-sans text-center px-10 mt-2 font-bold">Sauna und Massagen in Prenzlauer Berg</h3>
+    <!-- Logo badge -->
+    <div class="relative z-10 mx-auto mt-8 md:mt-12">
+        <div class="border-2 border-copper/60 rounded-full p-1">
+            <div class="bg-charcoal/80 backdrop-blur-sm rounded-full px-8 py-6 md:px-12 md:py-8">
+                <h2 class="flex flex-col justify-center items-center m-auto font-display text-copper text-xl md:text-2xl tracking-widest text-center uppercase !mb-0">
+                    Saunabad
+                    <span class="text-cream/80 text-sm md:text-base font-sans font-light tracking-[0.3em] mt-1">Rykestraße</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main hero content -->
+    <div class="relative z-10 flex-1 flex flex-col justify-center items-center px-6 -mt-12">
+        <div class="text-center">
+            <p class="text-copper tracking-[0.4em] uppercase text-sm md:text-base mb-4 font-light">Berlin Prenzlauer Berg</p>
+            <h1 class="font-display text-cream text-7xl md:text-9xl leading-[0.9] uppercase mb-6 drop-shadow-2xl">Saunabad</h1>
+            <div class="w-24 h-[2px] bg-copper mx-auto mb-6"></div>
+            <h3 class="text-cream/90 text-xl md:text-2xl font-light tracking-wide max-w-lg mx-auto">
+                Ihre Oase für Sauna & Wellness
+            </h3>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="relative z-10 pb-12 flex flex-col items-center">
+        <span class="text-cream/60 text-xs tracking-widest uppercase mb-3">Entdecken</span>
+        <div class="w-[1px] h-12 bg-gradient-to-b from-copper to-transparent animate-pulse"></div>
     </div>
 </header>
