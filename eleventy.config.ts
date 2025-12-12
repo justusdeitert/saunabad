@@ -8,7 +8,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 export default function (eleventyConfig: UserConfig): ContentTemplate {
 	// https://www.11ty.dev/docs/data-custom/#yaml
-	eleventyConfig.addDataExtension('yml, yaml', (contents: string) => yaml.load(contents));
+	(eleventyConfig as any).addDataExtension('yml, yaml', (contents: string) => yaml.load(contents));
 
 	// https://www.11ty.dev/docs/shortcodes/#universal-shortcodes
 	eleventyConfig.addShortcode('hash', () => String(Date.now()));
