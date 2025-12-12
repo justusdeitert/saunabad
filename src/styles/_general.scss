@@ -1,6 +1,6 @@
 html {
 	color: var(--color-charcoal);
-	scroll-behavior: smooth;
+	// Note: scroll-behavior: smooth removed to not interfere with Highway.js page transitions
 }
 
 body {
