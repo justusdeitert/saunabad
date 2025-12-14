@@ -29,8 +29,14 @@ export default function (eleventyConfig: UserConfig): ContentTemplate {
 	eleventyConfig.addPassthroughCopy({
 		// htaccess
 		'./src/.htaccess': '.htaccess',
-		// object as (src glob): (dest)
+		// Favicons
 		'./src/images/favicon.svg': './favicon.svg',
+		'./src/favicon.ico': './favicon.ico',
+		'./src/apple-touch-icon.png': './apple-touch-icon.png',
+		'./src/android-chrome-192x192.png': './android-chrome-192x192.png',
+		'./src/android-chrome-512x512.png': './android-chrome-512x512.png',
+		'./src/site.webmanifest': './site.webmanifest',
+		// Images
 		'./src/images/bar.jpg': './images/bar.jpg',
 		'./src/images/saunagarten.jpg': './images/saunagarten.jpg',
 		'./src/images/saunagarten_02.jpg': './images/saunagarten_02.jpg',
