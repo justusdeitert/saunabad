@@ -2,7 +2,7 @@
     {% for faq in faqs %}
     <div class="accordion__collapse bg-sand/60 rounded-lg border border-copper/10 overflow-hidden {% if forloop.first %}open{% endif %}">
         <div class="relative flex items-center cursor-pointer accordion__header px-5 py-4 hover:bg-sand transition-colors">
-            <h5 class="my-0 text-forest font-medium pr-8">
+            <h5 class="!my-0 text-forest font-medium pr-8">
                 {{ faq.title }}
             </h5>
             {% include 'icons/icon-chevron-down' classnames: 'w-5 lg:w-[1.4vw] stroke-copper absolute right-4 transition-transform duration-300' %}
