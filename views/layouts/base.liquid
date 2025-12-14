@@ -27,9 +27,11 @@
     <meta property="twitter:image" content="{{ meta.og.image }}" />
     <meta property="twitter:locale" content="{{ meta.og.locale }}" />
 
-    <!-- Favicon -->
+    <!-- Favicon - Google requires min 48x48px, multiples of 48 work best -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Styles -->
     <link as="style" href="/styles/main.css?ver={% hash %}" rel="stylesheet preload" />
