@@ -1,6 +1,9 @@
 {
 	"name": "Saunabad Berlin",
 	"short_name": "Saunabad",
+	"description": "Kiez-Saunabad in Prenzlauer Berg mit Blockbohlensauna und Aroma-Aufgüssen",
+	"start_url": "/",
+	"scope": "/",
 	"icons": [
 		{
 			"src": "/android-chrome-192x192.png",
@@ -15,5 +18,6 @@
 	],
 	"theme_color": "#477437",
 	"background_color": "#ffffff",
-	"display": "standalone"
+	"display": "standalone",
+	"lang": "de"
 }
