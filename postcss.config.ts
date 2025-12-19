@@ -8,9 +8,10 @@ export default async (): Promise<Config> => {
 	const tailwindcss = (await import('@tailwindcss/postcss')).default;
 	const autoprefixer = (await import('autoprefixer')).default;
 	const cssnano = isProd ? (await import('cssnano')).default : null;
+	const postcssScss = (await import('postcss-scss')).default;
 
 	return {
-		syntax: 'postcss-scss',
+		syntax: postcssScss,
 		plugins: [
 			postcssImport,
 			postcssSass({ silenceDeprecations: ['legacy-js-api'] }),
