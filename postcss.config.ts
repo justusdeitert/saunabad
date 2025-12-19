@@ -2,17 +2,21 @@ import type { Config } from 'postcss-load-config';
 
 const isProd = process.env.NODE_ENV === 'production';
 
-const config: Config = {
-	syntax: 'postcss-scss',
-	plugins: [
-		(await import('postcss-import')).default,
-		(await import('@csstools/postcss-sass')).default({
-			silenceDeprecations: ['legacy-js-api'],
-		}),
-		(await import('@tailwindcss/postcss')).default,
-		(await import('autoprefixer')).default,
-		isProd && (await import('cssnano')).default({ preset: 'default' }),
-	],
-};
+export default async (): Promise<Config> => {
+	const postcssImport = (await import('postcss-import')).default;
+	const postcssSass = (await import('@csstools/postcss-sass')).default;
+	const tailwindcss = (await import('@tailwindcss/postcss')).default;
+	const autoprefixer = (await import('autoprefixer')).default;
+	const cssnano = isProd ? (await import('cssnano')).default : null;
 
-export default config;
+	return {
+		syntax: 'postcss-scss',
+		plugins: [
+			postcssImport,
+			postcssSass({ silenceDeprecations: ['legacy-js-api'] }),
+			tailwindcss,
+			autoprefixer,
+			cssnano && cssnano({ preset: 'default' }),
+		].filter(Boolean),
+	};
+};
