@@ -1,11 +1,106 @@
 import Highway from '@dogstudio/highway';
 import { gsap } from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+// Register GSAP plugins
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 interface TransitionParams {
 	from: HTMLElement;
 	to: HTMLElement;
 	done: () => void;
+}
+
+/**
+ * Scroll indicator parallax fade effect
+ */
+function initScrollIndicatorParallax() {
+	// Kill existing ScrollTriggers to prevent duplicates
+	ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+	
+	const scrollIndicator = document.querySelector('#scroll-indicator');
+	
+	if (scrollIndicator) {
+		gsap.to(scrollIndicator, {
+			opacity: 0,
+			y: 50,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '#hero',
+				start: 'top top',
+				end: '30% top',
+				scrub: true,
+			}
+		});
+	}
+
+	// Decorative circles parallax
+	const decorativeCircles = document.querySelector('#decorative-circles');
+	
+	if (decorativeCircles) {
+		gsap.to(decorativeCircles, {
+			y: -100,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '#preise',
+				start: 'top bottom',
+				end: 'bottom top',
+				scrub: true,
+			}
+		});
+	}
+
+	// Gallery circles parallax (move down)
+	const galleryCircles = document.querySelector('#gallery-circles');
+	
+	if (galleryCircles) {
+		gsap.to(galleryCircles, {
+			y: 80,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '#gallery',
+				start: 'top bottom',
+				end: 'bottom top',
+				scrub: true,
+			}
+		});
+	}
+
+	// Massage ring parallax (move up)
+	const massageRing = document.querySelector('#massage-ring');
+	
+	if (massageRing) {
+		gsap.to(massageRing, {
+			y: -60,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '#massage-ring',
+				start: 'top bottom',
+				end: 'bottom top',
+				scrub: true,
+			}
+		});
+	}
+
+	// Section dividers - grow width on scroll into view
+	const dividers = document.querySelectorAll('.section-divider');
+	
+	dividers.forEach((divider) => {
+		gsap.fromTo(divider, 
+			{ scaleX: 0, transformOrigin: 'left center' },
+			{
+				scaleX: 1,
+				duration: 0.8,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: divider,
+					start: 'top 85%',
+					toggleActions: 'play none none none',
+				}
+			}
+		);
+	});
 }
 
 /**
@@ -35,6 +130,7 @@ class Fade extends Highway.Transition {
 		});
 
 		initSwiper();
+		initScrollIndicatorParallax();
 		done();
 	}
 
@@ -123,8 +219,6 @@ accordions.forEach((accordion) => {
 });
 
 // scroll to anchor with gsap
-gsap.registerPlugin(ScrollToPlugin);
-
 const anchors: NodeListOf<HTMLElement> = document.querySelectorAll('a[href*="#"]');
 anchors.forEach((anchor) => {
 	anchor.addEventListener('click', (event) => {
@@ -141,3 +235,6 @@ anchors.forEach((anchor) => {
 		});
 	});
 });
+
+// Initialize scroll indicator parallax
+initScrollIndicatorParallax();
