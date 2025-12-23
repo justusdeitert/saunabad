@@ -7,10 +7,12 @@
             </h5>
             {% include 'icons/icon-chevron-down' classnames: 'w-5 lg:w-[1.4vw] stroke-copper absolute right-4 transition-transform duration-300' %}
         </div>
-        <div class="hidden accordion__body px-5 pb-4">
-            <p class="text-charcoal/70 leading-relaxed">
-                {{ faq.body }}
-            </p>
+        <div class="accordion__body overflow-hidden">
+            <div class="accordion__content px-5 pb-4">
+                <p class="text-charcoal/70 leading-relaxed">
+                    {{ faq.body }}
+                </p>
+            </div>
         </div>
     </div>
     {%- endfor %}

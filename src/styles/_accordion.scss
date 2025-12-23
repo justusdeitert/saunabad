@@ -1,10 +1,6 @@
-.opening {
-	animation: opening 0.4s forwards cubic-bezier(0.25, 1, 0.5, 1);
-}
-
 .accordion {
     &__collapse {
-        transition: all 0.3s ease;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
         
         &:hover {
             border-color: var(--color-copper);
@@ -13,10 +9,6 @@
         &.open {
             background-color: var(--color-sand);
             border-color: var(--color-copper);
-            
-            .accordion__body {
-                display: block;
-            }
 
             svg {
                 transform: rotate(180deg);
@@ -26,5 +18,23 @@
                 border-bottom: 1px solid rgba(var(--color-copper), 0.2);
             }
         }
+    }
+
+    &__body {
+        height: 0;
+    }
+
+    &__content {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    &__collapse.open &__body {
+        height: auto;
+    }
+
+    &__collapse.open &__content {
+        opacity: 1;
+        transform: translateY(0);
     }
 } 
