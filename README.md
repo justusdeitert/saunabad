@@ -4,6 +4,8 @@ A modern, performant static website for **Saunabad Berlin** – a cozy neighborh
 
 🌐 **Live Site:** [saunabad-berlin.de](https://www.saunabad-berlin.de)
 
+🚀 **Preview:** [saunabad.netlify.app](https://saunabad.netlify.app/)
+
 ## ✨ Features
 
 - **Static Site Generation** with [Eleventy 3.x](https://www.11ty.dev/)
