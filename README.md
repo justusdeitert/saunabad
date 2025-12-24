@@ -174,7 +174,6 @@ TypeScript is configured for ES Modules with strict type checking. See [tsconfig
 - **Semicolons:** Required
 - **Module System:** ES Modules
 
-
 ## 📄 License
 
 This project is licensed under the MIT License.
