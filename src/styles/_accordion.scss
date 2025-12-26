@@ -19,10 +19,12 @@
     &__body {
         display: grid;
         grid-template-rows: 0fr;
+        overflow: hidden;
         transition: grid-template-rows 0.3s ease-out;
     }
 
     &__content {
+        min-height: 0;
         overflow: hidden;
         opacity: 0;
         transform: translateY(-10px);
