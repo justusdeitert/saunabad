@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
-  "license": "MIT",
+  "license": "SEE LICENSE FILE",
   "scripts": {
     "dev:11ty": "tsx node_modules/.bin/eleventy --serve --config=eleventy.config.ts",
     "dev:postcss": "postcss ./src/styles/main.scss -o ./dist/styles/main.css --watch --verbose --config postcss.config.cjs",
