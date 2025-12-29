@@ -1,7 +1,9 @@
 <section class="grid md:grid-cols-5" id="sauna">
     <!-- Sticky image sidebar -->
-    <div class="sticky top-0 hidden max-h-screen md:col-span-2 md:block relative">
-        {% image "./src/images/innensauna.jpg", "Blick aus der Innensauna", "(min-width: 30em) 50vw, 100vw" "h-full w-full object-cover" %}
+    <div id="sauna-image" class="sticky top-0 hidden max-h-screen md:col-span-2 md:block relative overflow-hidden">
+        <div id="sauna-image-inner" class="h-full w-full">
+            {% image "./src/images/innensauna.jpg", "Blick aus der Innensauna", "(min-width: 30em) 50vw, 100vw" "h-full w-full object-cover" %}
+        </div>
         <div class="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/20"></div>
     </div>
 
