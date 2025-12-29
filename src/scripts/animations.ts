@@ -96,9 +96,9 @@ export function initScrollIndicatorParallax() {
 	
 	if (infoLeaf) {
 		gsap.fromTo(infoLeaf, 
-			{ y: 150 },
+			{ y: 60 },
 			{
-				y: -100,
+				y: -40,
 				ease: 'none',
 				scrollTrigger: {
 					trigger: '#info',
@@ -115,7 +115,7 @@ export function initScrollIndicatorParallax() {
 	
 	if (saunaImageInner) {
 		gsap.fromTo(saunaImageInner,
-			{ scale: 1.1, y: -20 },
+			{ scale: 1.2, y: -20 },
 			{
 				scale: 1,
 				y: 20,
