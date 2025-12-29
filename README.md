@@ -1,6 +1,5 @@
 # Saunabad Berlin
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9febf0d2-2507-4d1f-867e-2512c98aaf16/deploy-status)](https://app.netlify.com/projects/saunabad/deploys)
 [![Eleventy](https://img.shields.io/badge/Eleventy-3.x-black?logo=eleventy)](https://www.11ty.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -10,7 +9,7 @@ A modern, performant static website for **Saunabad Berlin** – a cozy neighborh
 
 🌐 **Live Site:** [saunabad-berlin.de](https://www.saunabad-berlin.de)
 
-🚀 **Preview:** [saunabad.netlify.app](https://saunabad.netlify.app/)
+🧪 **Preview:** [saunabad.justusdeitert.de](https://saunabad.justusdeitert.de)
 
 ## ✨ Features
 
