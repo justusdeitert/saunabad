@@ -1,23 +1,35 @@
-import htmlmin from './utils/htmlmin.js';
+import htmlmin from './utils/htmlmin.ts';
 import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
 import Image from '@11ty/eleventy-img';
 import fs from 'fs';
 import path from 'path';
+import type { UserConfig, ContentTemplate } from '@11ty/eleventy';
 
 const isProd = process.env.NODE_ENV === 'production';
 
 // https://www.11ty.dev/docs/plugins/image/
-async function imageShortcode(src, alt, sizes, classes) {
+async function imageShortcode(
+	src: string,
+	alt: string,
+	sizes: string,
+	classes: string
+): Promise<string> {
 	if (!fs.existsSync(src)) {
 		src = './src/images/placeholder.jpg';
 	}
 
-	let metadata = await Image(src, {
+	const metadata = await Image(src, {
 		widths: [300, 600, 1000],
 		formats: ['webp', 'jpeg'],
 		urlPath: '/images/',
 		outputDir: './dist/images/',
-		filenameFormat: function (id, src, width, format, options) {
+		filenameFormat: function (
+			id: string,
+			src: string,
+			width: number,
+			format: string,
+			options: object
+		): string {
 			const extension = path.extname(src);
 			const name = path.basename(src, extension);
 
@@ -31,21 +43,21 @@ async function imageShortcode(src, alt, sizes, classes) {
 		},
 	});
 
-	let imageAttributes = {
+	const imageAttributes = {
 		class: classes,
 		alt,
 		sizes,
-		loading: 'lazy',
-		decoding: 'async',
+		loading: 'lazy' as const,
+		decoding: 'async' as const,
 	};
 
 	// You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
 	return Image.generateHTML(metadata, imageAttributes);
 }
 
-export default function (eleventyConfig) {
+export default function (eleventyConfig: UserConfig): ContentTemplate {
 	// https://www.11ty.dev/docs/shortcodes/#universal-shortcodes
-	eleventyConfig.addShortcode('hash', () => Date.now());
+	eleventyConfig.addShortcode('hash', () => String(Date.now()));
 
 	// https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
 	if (isProd) {

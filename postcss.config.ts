@@ -1,6 +1,8 @@
+import type { Config } from 'postcss-load-config';
+
 const isProd = process.env.NODE_ENV === 'production';
 
-export default {
+const config: Config = {
 	syntax: 'postcss-scss',
 	plugins: [
 		(await import('postcss-import')).default,
@@ -12,3 +14,5 @@ export default {
 		isProd && (await import('cssnano')).default({ preset: 'default' }),
 	],
 };
+
+export default config;
