@@ -3,7 +3,7 @@ const description =
 	'Unser familiäres Kiez-Saunabad befindet sich in Prenzlauer Berg. In der Blockbohlensauna erwarten Sie Aroma-Aufgüsse mit Blick in unseren Sauna-Garten.';
 const url = 'https://www.saunabad-berlin.de';
 
-module.exports = {
+export default {
 	description: description,
 	url: url,
 	og: {

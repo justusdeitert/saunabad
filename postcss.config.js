@@ -1,13 +1,13 @@
 const isProd = process.env.NODE_ENV === 'production';
 
-module.exports = {
+export default {
 	syntax: 'postcss-scss',
 	plugins: [
-		require('postcss-import'),
-		require('tailwindcss/nesting'),
-		require('tailwindcss'),
-		require('autoprefixer'),
-		require('@csstools/postcss-sass'),
-		isProd && require('cssnano')({ preset: 'default' }),
+		(await import('postcss-import')).default,
+		(await import('tailwindcss/nesting/index.js')).default,
+		(await import('tailwindcss')).default,
+		(await import('autoprefixer')).default,
+		(await import('@csstools/postcss-sass')).default,
+		isProd && (await import('cssnano')).default({ preset: 'default' }),
 	],
 };
