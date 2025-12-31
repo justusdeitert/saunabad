@@ -1,11 +1,15 @@
 import htmlmin from './lib/transforms/htmlmin.ts';
 import { imageShortcode } from './lib/shortcodes/image.ts';
 import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
+import yaml from 'js-yaml';
 import type { UserConfig, ContentTemplate } from '@11ty/eleventy';
 
 const isProd = process.env.NODE_ENV === 'production';
 
 export default function (eleventyConfig: UserConfig): ContentTemplate {
+	// https://www.11ty.dev/docs/data-custom/#yaml
+	eleventyConfig.addDataExtension('yml, yaml', (contents: string) => yaml.load(contents));
+
 	// https://www.11ty.dev/docs/shortcodes/#universal-shortcodes
 	eleventyConfig.addShortcode('hash', () => String(Date.now()));
 
