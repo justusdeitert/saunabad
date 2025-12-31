@@ -10,9 +10,7 @@ export default function (eleventyConfig: UserConfig): ContentTemplate {
 	eleventyConfig.addShortcode('hash', () => String(Date.now()));
 
 	// https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
-	if (isProd) {
-		eleventyConfig.addTransform('htmlmin', htmlmin);
-	}
+	if (isProd) eleventyConfig.addTransform('htmlmin', htmlmin);
 
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 	eleventyConfig.addWatchTarget('./src/');
