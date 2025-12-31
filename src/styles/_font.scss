@@ -74,7 +74,11 @@ h1 {
 }
 
 .text-shadow {
-	text-shadow: 0.5vw 0 0 theme("colors.yellow.500");;
+	text-shadow: 0.3vw 0.2vw 0.5vw rgba(0, 0, 0, 0.3);
+}
+
+.text-shadow-copper {
+	text-shadow: 0.2vw 0.2vw 0 var(--color-copper);
 }
 
 p,
@@ -91,6 +95,12 @@ h3,
 h4,
 h5,
 h6 {
-	@apply mb-4 md:mb-[2vw]
+	@apply mb-4 md:mb-[2vw];
+	font-weight: 400;
+}
+
+// Display font styling
+.font-display {
+	letter-spacing: 0.05em;
 }
 
