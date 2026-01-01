@@ -22,7 +22,8 @@
 		"views/_data/**/*.ts",
 		"lib/types/**/*.d.ts",
 		"eleventy.config.ts",
-		"postcss.config.ts"
+		"postcss.config.ts",
+		"global.d.ts"
 	],
 	"exclude": ["node_modules", "dist"]
 }
