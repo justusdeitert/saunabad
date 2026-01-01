@@ -42,6 +42,15 @@ export default function (eleventyConfig: UserConfig): ContentTemplate {
 		'./src/images/saunagarten_02.jpg': './images/saunagarten_02.jpg',
 	});
 
+	// https://www.11ty.dev/docs/dev-server/
+	eleventyConfig.setServerOptions({
+		// Listen on all network interfaces (allows access from phone/tablet)
+		domDiff: true,
+		port: 8080,
+		// This makes it accessible on your local network
+		showAllHosts: true,
+	});
+
 	return {
 		dir: {
 			input: 'views',
