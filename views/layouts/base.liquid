@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="antialiased">
+<html lang="de" class="antialiased">
 
 <head>
     <meta charset="UTF-8" />
@@ -9,23 +9,71 @@
     <!-- Title & Description -->
     <title>{{ title }}</title>
     <meta name="description" content="{{ meta.description }}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ meta.url }}{{ page.url }}">
 
     <!-- OpenGraph Tags -->
     <meta property="og:title" content="{{ meta.og.title }}" />
     <meta property="og:description" content="{{ meta.og.description }}" />
-    <meta property="og:type" content="{{ meta.og.type }}" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ meta.url }}{{ page.url }}" />
-
-    <meta property="og:image" content="{{ meta.og.image }}" />
+    <meta property="og:image" content="{{ meta.url }}{{ meta.og.image }}" />
     <meta property="og:locale" content="{{ meta.og.locale }}" />
+    <meta property="og:site_name" content="Saunabad Berlin" />
 
     <!-- Twitter tags -->
-    <meta property="twitter:title" content="{{ meta.og.title }}" />
-    <meta property="twitter:description" content="{{ meta.og.description }}" />
-    <meta property="twitter:type" content="{{ meta.og.type }}" />
-    <meta property="twitter:url" content="{{ meta.url }}{{ page.url }}" />
-    <meta property="twitter:image" content="{{ meta.og.image }}" />
-    <meta property="twitter:locale" content="{{ meta.og.locale }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ meta.og.title }}" />
+    <meta name="twitter:description" content="{{ meta.og.description }}" />
+    <meta name="twitter:image" content="{{ meta.url }}{{ meta.og.image }}" />
+
+    <!-- Schema.org LocalBusiness structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HealthAndBeautyBusiness",
+        "name": "Saunabad Berlin",
+        "description": "{{ meta.description }}",
+        "url": "{{ meta.url }}",
+        "telephone": "+49 30 44046397",
+        "email": "info@saunabad-berlin.de",
+        "image": "{{ meta.url }}{{ meta.og.image }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rykestraße 10",
+            "addressLocality": "Berlin",
+            "addressRegion": "Berlin",
+            "postalCode": "10405",
+            "addressCountry": "DE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 52.5347,
+            "longitude": 13.4267
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "15:00",
+                "closes": "24:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "12:00",
+                "closes": "24:00"
+            }
+        ],
+        "priceRange": "€€",
+        "currenciesAccepted": "EUR",
+        "paymentAccepted": "Cash, Credit Card",
+        "sameAs": [
+            "https://www.instagram.com/saunabad_berlin/",
+            "https://www.facebook.com/Saunabad-Berlin-Prenzlauer-Berg-176322405726284/"
+        ]
+    }
+    </script>
 
     <!-- Favicon - Google requires min 48x48px, multiples of 48 work best -->
     <link rel="icon" href="/favicon.ico" sizes="48x48">
