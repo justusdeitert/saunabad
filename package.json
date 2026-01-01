@@ -5,11 +5,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev:11ty": "eleventy --serve --config=eleventy.config.ts",
+    "dev:11ty": "tsx node_modules/.bin/eleventy --serve --config=eleventy.config.ts",
     "dev:postcss": "postcss ./src/styles/main.scss -o ./dist/styles/main.css --watch --verbose --config postcss.config.ts",
     "dev:esbuild": "esbuild src/scripts/main.ts --bundle --watch --sourcemap --outfile=./dist/scripts/main.js",
     "dev": "rm -rf ./dist && run-p dev:*",
-    "build:11ty": "NODE_ENV=production eleventy --config=eleventy.config.ts",
+    "build:11ty": "NODE_ENV=production tsx node_modules/.bin/eleventy --config=eleventy.config.ts",
     "build:postcss": "NODE_ENV=production postcss ./src/styles/main.scss -o ./dist/styles/main.css --verbose --config postcss.config.ts",
     "build:esbuild": "esbuild src/scripts/main.ts --bundle --minify --outfile=./dist/scripts/main.js",
     "build": "rm -rf ./dist && run-p build:*",
