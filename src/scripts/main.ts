@@ -35,6 +35,22 @@ function initScrollIndicatorParallax() {
 		});
 	}
 
+	// Hero background parallax
+	const heroBg = document.querySelector('#hero-bg');
+	
+	if (heroBg) {
+		gsap.to(heroBg, {
+			y: 80,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '#hero',
+				start: 'top top',
+				end: 'bottom top',
+				scrub: true,
+			}
+		});
+	}
+
 	// Decorative circles parallax
 	const decorativeCircles = document.querySelector('#decorative-circles');
 	
