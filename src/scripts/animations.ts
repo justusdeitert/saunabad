@@ -91,6 +91,25 @@ export function initScrollIndicatorParallax() {
 		});
 	}
 
+	// Info leaf parallax (move up)
+	const infoLeaf = document.querySelector('#info-leaf');
+	
+	if (infoLeaf) {
+		gsap.fromTo(infoLeaf, 
+			{ y: 150 },
+			{
+				y: -100,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: '#info',
+					start: 'top bottom',
+					end: 'bottom top',
+					scrub: true,
+				}
+			}
+		);
+	}
+
 	// Section dividers - grow width on scroll into view
 	const dividers = document.querySelectorAll('.section-divider');
 	
