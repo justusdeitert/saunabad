@@ -1,6 +1,8 @@
 import Highway from '@dogstudio/highway';
 import { initSwiper } from './swiper';
 import { initScrollIndicatorParallax } from './animations';
+import { initAccordion } from './accordion';
+import { initSmoothScroll } from './smooth-scroll';
 
 interface TransitionParams {
 	from: HTMLElement;
@@ -37,6 +39,8 @@ class Fade extends Highway.Transition {
 
 		initSwiper();
 		initScrollIndicatorParallax();
+		initAccordion();
+		initSmoothScroll();
 		done();
 	}
 
