@@ -176,7 +176,12 @@ TypeScript is configured for ES Modules with strict type checking. See [tsconfig
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project uses a **dual license**:
+
+- **Code** (templates, scripts, styles, config): [MIT License](LICENSE)
+- **Content** (images, texts, brand assets): © Saunabad GbR – All Rights Reserved
+
+See the [LICENSE](LICENSE) file for full details.
 
 ## 🙏 Acknowledgments
 
