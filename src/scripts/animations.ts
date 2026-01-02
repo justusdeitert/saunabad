@@ -110,6 +110,26 @@ export function initScrollIndicatorParallax() {
 		);
 	}
 
+	// Sauna sticky image - smooth scale and subtle vertical shift
+	const saunaImageInner = document.querySelector('#sauna-image-inner');
+	
+	if (saunaImageInner) {
+		gsap.fromTo(saunaImageInner,
+			{ scale: 1.1, y: -20 },
+			{
+				scale: 1,
+				y: 20,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: '#sauna',
+					start: 'top bottom',
+					end: 'bottom top',
+					scrub: 0.8,
+				}
+			}
+		);
+	}
+
 	// Section dividers - grow width on scroll into view
 	const dividers = document.querySelectorAll('.section-divider');
 	
