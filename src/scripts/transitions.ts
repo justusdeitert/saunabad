@@ -15,6 +15,7 @@ class Fade extends Highway.Transition {
 	in({ from, to, done }: TransitionParams) {
 		// Animation
 		const main = to.querySelector('main');
+
 		if (!main) return done();
 		
 		const sections: NodeListOf<HTMLElement> = main.querySelectorAll('section, footer, header');
